@@ -6,10 +6,19 @@
 	objectVersion = 48;
 	objects = {
 
+/* Begin PBXFileReference section */
+		5C95CA281FAA6A230065F9C1 /* hello.world.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = hello.world.sh; sourceTree = "<group>"; };
+		5CA457D91FBB8322005F673E /* star.alignment.loop.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = star.alignment.loop.sh; sourceTree = "<group>"; };
+		5CA457DA1FBB8409005F673E /* htseq.count.loop.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = htseq.count.loop.sh; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		5CF612371FA983320030CD80 = {
 			isa = PBXGroup;
 			children = (
+				5C95CA281FAA6A230065F9C1 /* hello.world.sh */,
+				5CA457D91FBB8322005F673E /* star.alignment.loop.sh */,
+				5CA457DA1FBB8409005F673E /* htseq.count.loop.sh */,
 			);
 			sourceTree = "<group>";
 		};
