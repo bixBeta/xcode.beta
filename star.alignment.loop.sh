@@ -15,6 +15,7 @@
 #SBATCH --mem-per-cpu=20000
 
 # declare an array of all fastq.gz file names
+
 declare -a fasta=("FIBROB-DMSO-K27Ac_S7_R1_001.fastq.gz"
                 "FIBROB-DMSO-p53_S6_R1_001.fastq.gz"
                 "FIBROB-NUTLIN-K27Ac_S3_R1_001.fastq.gz"
