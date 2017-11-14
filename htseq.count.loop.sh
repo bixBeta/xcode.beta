@@ -41,7 +41,7 @@ do
 i SUB=`echo "$i" | cut -d'.' -f1`  # set appropriate out file name schema
 
 
-BIN=/network/rit/lab/ahmedlab/bin/anaconda2/bin/htseq-count
+BIN=/network/rit/lab/ahmedlab/bin/anaconda2/bin/htseq-count # location of htseq-count program
 GTF=/network/rit/lab/ahmedlab/genomes/ucsc/Homo_sapiens/hg19/Annotation/Genes/genes.gtf
 
 $BIN -f bam -s yes -t exon -i gene_id -m intersection-strict \
