@@ -30,7 +30,7 @@ declare -a fasta=("FIBROB-DMSO-K27Ac.Aligned.sortedByCoord.out.bam"
 for i in "${fasta[@]}"
 do
 
-BIN=/network/rit/lab/ahmedlab/bin/anaconda2/bin/makeTagDirectory
+BIN=/network/rit/lab/ahmedlab/bin/anaconda2/bin/makeTagDirectory # location of HOMER
 iSUB=`echo "$i" | cut -d'.' -f1`
 
 $BIN "$iSUB".tag.dir "$i"

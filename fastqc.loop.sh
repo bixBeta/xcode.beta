@@ -28,7 +28,7 @@ declare -a fastq=("FIBROB-DMSO-K27Ac_S7_R1_001.fastq.gz"
                 "MCF10A-NUTLIN-K27Ac_S11_R1_001.fastq.gz"
                 "MCF10A-NUTLIN-p53_S8_R1_001.fastq.gz")
 
-BIN=/network/rit/lab/ahmedlab/bin/FastQC/fastqc # location of fastqc program
+BIN=/network/rit/lab/ahmedlab/bin/FastQC/fastqc # location of FASTQC
 
 for i in "${fastq[@]}"
 do
