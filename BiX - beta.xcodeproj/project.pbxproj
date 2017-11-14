@@ -11,6 +11,7 @@
 		5CA457D91FBB8322005F673E /* star.alignment.loop.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = star.alignment.loop.sh; sourceTree = "<group>"; };
 		5CA457DA1FBB8409005F673E /* htseq.count.loop.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = htseq.count.loop.sh; sourceTree = "<group>"; };
 		5CBA947B1FBB942700A02E92 /* fastqc.loop.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = fastqc.loop.sh; sourceTree = "<group>"; };
+		5CBA947C1FBB967C00A02E92 /* homer.tagDir.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = homer.tagDir.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -21,6 +22,7 @@
 				5CA457D91FBB8322005F673E /* star.alignment.loop.sh */,
 				5CA457DA1FBB8409005F673E /* htseq.count.loop.sh */,
 				5CBA947B1FBB942700A02E92 /* fastqc.loop.sh */,
+				5CBA947C1FBB967C00A02E92 /* homer.tagDir.sh */,
 			);
 			sourceTree = "<group>";
 		};
