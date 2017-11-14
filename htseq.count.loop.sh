@@ -15,6 +15,7 @@
 #SBATCH --mem-per-cpu=20000
 
 # declare an array of all bam file names
+
 declare -a bam=("FIBROB_DMSO_1.Aligned.sortedByCoord.out.bam"
                 "FIBROB_DMSO_2.Aligned.sortedByCoord.out.bam"
                 "FIBROB_DMSO_3.Aligned.sortedByCoord.out.bam"
