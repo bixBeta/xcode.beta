@@ -38,7 +38,7 @@ declare -a bam=("FIBROB_DMSO_1.Aligned.sortedByCoord.out.bam"
 for i in "${bam[@]}"
 do
 
-i SUB=`echo "$i" | cut -d'.' -f1`  # set appropriate out file name schema
+iSUB=`echo "$i" | cut -d'.' -f1`  # set appropriate out file name schema
 
 
 BIN=/network/rit/lab/ahmedlab/bin/anaconda2/bin/htseq-count # location of htseq-count 
