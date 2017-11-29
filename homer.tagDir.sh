@@ -27,13 +27,18 @@ declare -a fasta=("FIBROB-DMSO-K27Ac.Aligned.sortedByCoord.out.bam"
                 "MCF10A-NUTLIN-K27Ac.Aligned.sortedByCoord.out.bam"
                 "MCF10A-NUTLIN-p53.Aligned.sortedByCoord.out.bam")
 
+BIN=/network/rit/lab/ahmedlab/bin/anaconda2/bin/makeTagDirectory # location of HOMER
+export PATH="/network/rit/lab/ahmedlab/bin/anaconda2/bin/:$PATH" # samtools has to be in the $PATH
+
 for i in "${fasta[@]}"
+
 do
 
-BIN=/network/rit/lab/ahmedlab/bin/anaconda2/bin/makeTagDirectory # location of HOMER
 iSUB=`echo "$i" | cut -d'.' -f1`
-
 $BIN "$iSUB".tag.dir "$i"
+
+done
+
 
 
 
