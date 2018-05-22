@@ -14,33 +14,26 @@
 #SBATCH --nodes=2
 #SBATCH --mem-per-cpu=20000
 
-# declare an array of all fastq.gz file names
 
-declare -a fasta=("FIBROB-DMSO-K27Ac_S7_R1_001.fastq.gz"
-                "FIBROB-DMSO-p53_S6_R1_001.fastq.gz"
-                "FIBROB-NUTLIN-K27Ac_S3_R1_001.fastq.gz"
-                "FIBROB-NUTLIN-p53_S12_R1_001.fastq.gz"
-                "HUVEC-DMSO-K27Ac_S2_R1_001.fastq.gz"
-                "HUVEC-DMSO-p53_S5_R1_001.fastq.gz"
-                "HUVEC-NUTLIN-K27Ac_S9_R1_001.fastq.gz"
-                "HUVEC-NUTLIN-p53_S1_R1_001.fastq.gz"
-                "MCF10A-DMSO-K27Ac_S4_R1_001.fastq.gz"
-                "MCF10A-DMSO-p53_S10_R1_001.fastq.gz"
-                "MCF10A-NUTLIN-K27Ac_S11_R1_001.fastq.gz"
-                "MCF10A-NUTLIN-p53_S8_R1_001.fastq.gz")
+# create a list of input fastq files
+ls -1 *R1* > Read1.list # for SE library
 
-for i in "${fasta[@]}"
+# ls -1 *R2* > Read2.list  # for PE library (un-comment line 21 and 22 and comment line 19 for PE usage)
+# paste -d" " Read1.list Read2.list > Reads.list # for PE library
+
+fastqs=( `cat "Reads.List" ` ) # reads each line as element of fastqs array
+
+for i in "${fastqs[@]}"
 do
 
 # set appropriate outFileNamePrefix schema
-iSUB=`echo "$i" | cut -d'_' -f1`
-
+iSUB=`echo "$i" | cut -d' ' -f1`
 FASTQ="$i"
+
 # set appropriate ref genome index
-DIR=/network/rit/lab/ahmedlab/genomes/ucsc/Homo_sapiens/hg19/genomeDir
+DIR=../genomes/ucsc/Homo_sapiens/hg19/genomeDir
 
-
-/network/rit/lab/ahmedlab/bin/STAR \
+STAR \
 --runThreadN 12 \
 --genomeDir $DIR \
 --readFilesIn $FASTQ \
@@ -50,5 +43,6 @@ DIR=/network/rit/lab/ahmedlab/genomes/ucsc/Homo_sapiens/hg19/genomeDir
 --outSAMtype BAM SortedByCoordinate \
 --outFileNamePrefix "$iSUB". \
 --limitBAMsortRAM 61675612266
+--quantMode GeneCounts
 
 done
