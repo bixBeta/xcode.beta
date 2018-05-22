@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -l
 
 #  homer.tagDir.sh
 #  BiX - beta
