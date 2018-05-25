@@ -19,7 +19,8 @@
 ls -1 *R1* > Read1.list # for SE library
 
 # ls -1 *R2* > Read2.list  # for PE library (un-comment line 21 and 22 and comment line 19 for PE usage)
-# paste -d" " Read1.list Read2.list > Reads.list # for PE library
+
+paste -d" " Read1.list Read2.list > Reads.list # for SE and PE library
 
 fastqs=( `cat "Reads.List" ` ) # reads each line as element of fastqs array
 
